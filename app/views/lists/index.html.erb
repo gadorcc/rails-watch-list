@@ -38,7 +38,8 @@
         <% @lists.each do |list| %>
           <div class="col-md-4">
             <div class="card text-bg-dark">
-              <img src="https://clipground.com/images/cinema-logo-6.jpg" class="card-img" id="card-movies" alt="list movies" >
+              <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+              <%# <img src="https://clipground.com/images/cinema-logo-6.jpg" class="card-img" id="card-movies" alt="list movies" > %>
               <div class="card-img-overlay">
                 <h5 class="card-title centered"><%= link_to list.name.capitalize, list_path(list) %></h5>
               </div>
